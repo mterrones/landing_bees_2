@@ -48,7 +48,9 @@ body{
   flex-direction: column;
   align-content: space-between;
   font-weight: bold;
-  font-size: 22.8px;
+  font-size: 17.14px;
+  /* //quitada flex */
+  padding-right: 20px;
 }
 
 .items-section {
@@ -63,7 +65,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 
   width: 40%;
   margin: 20px 5px 20px 5px;
@@ -122,23 +124,31 @@ input {
   .form-section {
     /* border: 1px solid green; */
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: none;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-content: center; */
+    /* background-color: none; */
     /* background: transparent; */
     
     /* justify-content: center; */
-    height: 620px;
+    /* height: 620px; */
+    padding: 35px;
   }
 
   .items-section {
-    flex-direction: column;
+    /* flex-direction: column; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
     /* margin: 10px; */
+    display: flex;
+    flex-direction: column;
   }
   .item-section {
+
     margin: 0px;
-    padding: 20px 0px 20px 0px;
+    padding: 12px 0px 20px 0px;
     width: 100%;
     box-sizing: border-box;
   }
@@ -152,6 +162,6 @@ input {
 
   input {
     padding: 8px 12px;
-    width: 130%;
+    width: 93%;
   }
 }
