@@ -47,7 +47,8 @@ body{
   display: flex;
   flex-direction: column;
   align-content: space-between;
-  font-weight: 900;
+  font-weight: bold;
+  font-size: 22.8px;
 }
 
 .items-section {
