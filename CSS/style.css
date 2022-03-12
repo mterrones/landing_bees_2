@@ -141,7 +141,7 @@ input {
     position: static;
     margin-top: 30px;
     width: 3rem;
-    border: 6px solid black;
+    /* border: 6px solid black; */
   }
 
   input {
