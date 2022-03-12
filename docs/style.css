@@ -153,16 +153,22 @@ input {
     box-sizing: border-box;
   }
 
+  .content-abeja{
+    display: flex;
+    justify-content: center;
+  }
+
   .btn-abeja {
-    /* position: static; */
-    left: 45%;
+    position: static;
+    /* padding-left: 10%;
+    padding-right: 10%;
     margin-top: 30px;
-    width: 3rem;
+    width: 9rem; */
     /* border: 6px solid black; */
   }
 
   input {
     padding: 8px 12px;
-    width: 93%;
+    width: 100%;
   }
 }
