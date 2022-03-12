@@ -154,7 +154,8 @@ input {
   }
 
   .btn-abeja {
-    position: static;
+    /* position: static; */
+    left: 45%;
     margin-top: 30px;
     width: 3rem;
     /* border: 6px solid black; */
