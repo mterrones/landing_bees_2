@@ -1,8 +1,4 @@
-@media (max-width: 992px) {
-  main {
-    background-size: 100% 100% !important;
-  }
-}
+
 
 main {
   background-color: #FFFF00;
@@ -15,6 +11,7 @@ main {
   align-items: end;
   height: 100vh;
   font-family: 'Barlow Semi Condensed', sans-serif;
+  background-position-x: center;
 }
 
 form {
@@ -36,11 +33,13 @@ form {
   padding-left: 0;
   list-style: none;
 }
+
 .icon-list li {
   display: flex;
   align-items: flex-start;
   margin-bottom: .25rem;
 }
+
 .icon-list li::before {
   display: block;
   flex-shrink: 0;
