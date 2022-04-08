@@ -9,7 +9,7 @@ main {
   background-image: url("./fondoWebNuevo.png");
   background-clip: content-box;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: end;
@@ -62,16 +62,16 @@ form {
 }
 
 .contenedor {
-  padding-top: 7rem;
+  padding-top: 10rem;
 }
 
 @media (max-width: 480px) {
   .input-bees {
-    margin-top: 15px!important;
+    margin-top: 2%!important;
   }
 
   .contenedor {
-    padding-top: 2rem;
+    padding-top: 50px;
   }
 
   main {

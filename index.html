@@ -41,10 +41,17 @@
         <div class="card card-form align-middle" style="background: transparent; border-color: transparent;">
           <div class="contenedor">
             <form action="enviarDatos.php" method="post" name="form-user" id="form" onsubmit="event.preventDefault();">
+              
               <div class="row px-4 mx-4 row-form">
+                <div >Registra tus datos y pronto un asesor se pondra en contacto</div>
+                
                 <div class="col-lg-6 form-input input-bees">
                   <label for="exampleFormControlInput1" style="font-weight: bold;">NOMBRE</label>
                   <input type="text" class="form-control input" name="nombre" id="nombre" required>
+                </div>
+                <div class="col-lg-6 form-input input-bees">
+                  <label for="exampleFormControlInput1" style="font-weight: bold;">APELLIDO</label>
+                  <input type="text" class="form-control input" name="apellido" id="apellido" required>
                 </div>
                 <div class="col-lg-6 form-input input-bees">
                   <label for="exampleFormControlInput1" style="font-weight: bold;">TELÉFONO</label>
@@ -52,10 +59,6 @@
                   <div id="validationServer03Feedback" class="invalid-feedback">
                     Ingrese un teléfono válido.
                   </div>
-                </div>
-                <div class="col-lg-6 form-input input-bees">
-                  <label for="exampleFormControlInput1" style="font-weight: bold;">APELLIDO</label>
-                  <input type="text" class="form-control input" name="apellido" id="apellido" required>
                 </div>
                 <div class="col-lg-6 form-input input-bees">
                   <label for="exampleFormControlInput1" style="font-weight: bold;">CORREO (opcional)</label>
