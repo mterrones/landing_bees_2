@@ -49,6 +49,9 @@
                 <div class="col-lg-6 form-input input-bees">
                   <label for="exampleFormControlInput1" style="font-weight: bold;">TELÉFONO</label>
                   <input type="number" class="form-control input" name="telefono" id="telefono" required>
+                  <div id="validationServer03Feedback" class="invalid-feedback">
+                    Ingrese un teléfono válido.
+                  </div>
                 </div>
                 <div class="col-lg-6 form-input input-bees">
                   <label for="exampleFormControlInput1" style="font-weight: bold;">APELLIDO</label>
@@ -127,15 +130,20 @@ crossorigin="anonymous"></script>
         "data": form
       };
 
-      $.ajax(settings).done(function (response) {
-        showToast()
-      });
+      if (document.getElementById('telefono').value.length !== 9 || document.getElementById('telefono').value.charAt(0) !== '9') {
 
+        btn.innerHTML = `Enviar`
+        btn.disabled = false;
+        $('#telefono').addClass('is-invalid')
+      } else {
+
+        $('#telefono').removeClass('is-invalid')
+        $.ajax(settings).done(function (response) {
+          window.location.href = '/gracias/gracias.html';
+        });
+      }
     });
 });
-
-
-
 
 </script>
 
