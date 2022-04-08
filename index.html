@@ -1,64 +1,149 @@
-<?php
 
-    // include("./enviarDatos.php");
-
-    // function hola (){
-    //     echo "hol";
-    // }
-
-?>
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/style.css">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Registro Bees!</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/starter-template/">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
 
-    <!-- <img class="img-bees" src="assets/bees.jpeg" alt="bees">
-    <img class="img-tienda" src="assets/tienda.jpeg" alt="tienda"> -->
-    <div class="content" >
-        <section class="content-section" >
-            <form class="form-section" action="enviarDatos.php" method="post" name="form-user">
-                <div class="items-section">
-                    <div class="item-section  uno">
-                        <label class="aa" for="">NOMBRE</label>
-                        <input class="item-input" name="nombre" type="text" required >
-                    </div>
-                    <div class="item-section ">
-                        <label for="">APELLIDO</label>
-                        <input class="item-input" name="apellido" type="text" required >
-                    </div>
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <link href="starter-template.css" rel="stylesheet">
+  </head>
 
-                </div>
-                <div class="items-section" >
-                    <div class="item-section ">
-                        <label for="">CORREO(opcional)</label>
-                        <input class="item-input" name="correo" type="email" required >
-                    </div>
-                    <div class="item-section ">
-                        <label for="">TELEFONO</label>
-                        <input class="item-input" name="telefono" type="number" required >
-                    </div>
-                    
-                </div>
-
-                <input class="btn-abeja"  title="boton enviar" alt="boton enviar" src="./assets/abeja2.jpeg" type="image" />
-                <!-- <button type="submit" >enviar</button> -->
-                <!-- <img class="btn-abeja" src="./assets/abeja2.jpeg" alt="boton" onclick="<?php ?>"> -->
-            </form>
-        </section>
+  <body>
+    <div class="position-fixed top-0 start-0 p-3" style="z-index: 11">
+      <div id="liveToast" class="toast text-white bg-black" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-body ">
+          Un agente se estará comunicando con usted.
+        </div>
+      </div>
     </div>
-   
+    <div>
+      <main>
+        <div class="card card-form align-middle" style="background: transparent; border-color: transparent;">
+          <div class="contenedor">
+            <form action="enviarDatos.php" method="post" name="form-user" id="form" onsubmit="event.preventDefault();">
+              <div class="row px-4 mx-4 row-form">
+                <div class="col-lg-6 form-input input-bees">
+                  <label for="exampleFormControlInput1" style="font-weight: bold;">NOMBRE</label>
+                  <input type="text" class="form-control input" name="nombre" id="nombre" required>
+                </div>
+                <div class="col-lg-6 form-input input-bees">
+                  <label for="exampleFormControlInput1" style="font-weight: bold;">TELÉFONO</label>
+                  <input type="number" class="form-control input" name="telefono" id="telefono" required>
+                </div>
+                <div class="col-lg-6 form-input input-bees">
+                  <label for="exampleFormControlInput1" style="font-weight: bold;">APELLIDO</label>
+                  <input type="text" class="form-control input" name="apellido" id="apellido" required>
+                </div>
+                <div class="col-lg-6 form-input input-bees">
+                  <label for="exampleFormControlInput1" style="font-weight: bold;">CORREO (opcional)</label>
+                  <input type="email" class="form-control input" name="correo" id="correo">
+                </div>
+                
+              </div>
 
-</body>
+              <div class="row abeja mt-4 justify-content-center">
+                <button type="submit" id="submit">
+                  Enviar
+                </button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div class="row justify-content-center abeja-img">
+      <img src="./abejaSinFondo.png" style="width:150px; margin-top: 3rem" class="pt-4">
+    </div>
+  </body>
 </html>
+
+<script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+<script
+src="https://code.jquery.com/jquery-3.6.0.js"
+integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+crossorigin="anonymous"></script>
+
+<script>
+  var toastLiveExample = document.getElementById('liveToast')
+  var btn = document.getElementById('submit')
+
+  var form = new FormData();
+
+  function showToast() {
+      var toast = new bootstrap.Toast(toastLiveExample)
+      toast.show()
+
+      btn.innerHTML = `Enviar`
+      btn.disabled = false;
+      $("#form")[0].reset();
+  }
+
+  $(document).ready(function() {
+    $('form').submit(function(e) {
+      
+      btn.innerHTML = `Enviando ....`
+      btn.disabled = true;
+
+      e.preventDefault();
+
+      var nombre = document.getElementById('nombre').value
+      var apellido = document.getElementById('apellido').value
+      var correo = document.getElementById('correo').value
+      var telefono = document.getElementById('telefono').value
+      
+      form.append("nombre", nombre);
+      form.append("apellido", apellido);
+      form.append("correo", correo);
+      form.append("telefono", telefono);
+
+      var settings = {
+        "url": "enviarDatos.php",
+        "method": "POST",
+        "timeout": 0,
+        "processData": false,
+        "mimeType": "multipart/form-data",
+        "contentType": false,
+        "data": form
+      };
+
+      $.ajax(settings).done(function (response) {
+        showToast()
+      });
+
+    });
+});
+
+
+
+
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXHM5B08WT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZXHM5B08WT');
+</script>
