@@ -109,7 +109,7 @@ form {
 
 @media (max-width: 380px) {
   .contenedor {
-    padding-top: 0px;
+    padding-top: 7px;
   }
 
   .abeja-img {
